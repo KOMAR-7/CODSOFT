@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/windowBackground"
+    tools:context=".sign_up">
+
+  <!-- Logo or Header -->
+  <ImageView
+      android:id="@+id/logoImageView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/quote_app_logo"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="50dp"/>
+
+  <!-- Username EditText -->
+  <soup.neumorphism.NeumorphCardView
+      android:id="@+id/cardUsername"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/logoImageView"
+      android:layout_marginTop="16dp"
+      app:neumorph_shapeType="basin"
+      app:neumorph_shadowElevation="4dp">
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logoImageView"
+        android:layout_margin="10dp"
+        android:hint="Username"
+
+        android:padding="10dp"
+        android:background="?android:attr/colorBackground"
+        android:textColor="?android:attr/textColorPrimary"
+        app:neumorph_backgroundColor="?android:attr/colorBackground"
+        app:neumorph_shapeType="flat"
+        />
+  </soup.neumorphism.NeumorphCardView>
+
+  <soup.neumorphism.NeumorphCardView
+      android:id="@+id/cardConfirmPassword"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/cardPassword"
+      app:neumorph_shapeType="basin"
+      android:layout_marginTop="16dp">
+
+
+  <EditText
+      android:id="@+id/confirmPasswordEditText"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:inputType="textPassword"
+      android:layout_below="@id/cardPassword"
+      android:layout_margin="10dp"
+      android:hint="Confrim Password"
+      android:padding="10dp"
+      android:background="?android:attr/colorBackground"
+      android:textColor="?android:attr/textColorPrimary"
+      app:neumorph_backgroundColor="?android:attr/colorBackground"
+      app:neumorph_shapeType="flat"
+      />
+
+  </soup.neumorphism.NeumorphCardView>
+  <!-- Password EditText -->
+  <soup.neumorphism.NeumorphCardView
+      android:id="@+id/cardPassword"
+      android:layout_width="match_parent"
+      app:neumorph_shapeType="basin"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/cardUsername"
+      android:layout_marginTop="16dp">
+
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logoImageView"
+        android:layout_margin="10dp"
+        android:hint="Password"
+        android:padding="10dp"
+        android:background="?android:attr/colorBackground"
+        android:textColor="?android:attr/textColorPrimary"
+        app:neumorph_backgroundColor="?android:attr/colorBackground"
+        app:neumorph_shapeType="flat"
+        android:inputType="textPassword"
+
+        />
+
+
+  </soup.neumorphism.NeumorphCardView>
+  <!-- Login Button -->
+  <soup.neumorphism.NeumorphButton
+      android:id="@+id/signUpBtn"
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/cardConfirmPassword"
+      android:layout_marginTop="16dp"
+      android:layout_centerHorizontal="true"
+      android:text="SignUp"
+      android:gravity="center"
+      android:clickable="true"
+      app:neumorph_backgroundColor="?android:attr/colorBackground"
+      app:neumorph_shapeType="basin"
+      android:padding="25dp"
+      android:textColor="?android:attr/textColorPrimary"/>
+
+  <!-- Sign Up Button -->
+  <TextView
+
+      android:id="@+id/loginTextBtn"
+      android:layout_below="@id/signUpBtn"
+      android:layout_centerHorizontal="true"
+      android:gravity="center"
+      android:layout_marginTop="16dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Already have an account? Sign Up!!!"
+      android:textColor="?android:attr/textColorPrimary"/>
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text = "- Developed by Khan Omar\nkhanomar0417@gamil.com"
+      android:layout_alignParentBottom="true"
+      android:layout_marginBottom="5dp"
+      />
+</RelativeLayout>

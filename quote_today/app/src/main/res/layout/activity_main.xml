@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/windowBackground"
+    tools:context=".MainActivity">
+
+    <!-- Top bar -->
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/topBarCardView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="10dp"
+        app:neumorph_backgroundColor="?android:attr/colorBackground"
+        app:neumorph_shapeType="basin"
+        app:neumorph_shadowColorDark="@color/lighter_gray"
+        app:neumorph_shadowElevation="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quote of the day!!!"
+            android:textColor="?android:attr/textColorPrimary"
+            android:layout_gravity="center"
+            android:textSize="20dp"/>
+    </soup.neumorphism.NeumorphCardView>
+
+    <!-- Middle body for quote -->
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/cardQuote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:neumorph_shapeType="basin"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+            <TextView
+                android:id="@+id/quoteText"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:textColor="?android:attr/textColorPrimary"/>
+
+            <TextView
+                android:id="@+id/quoteAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="?android:attr/textColorSecondary"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardQuote"
+        android:gravity="center"
+        android:padding="10dp"
+        app:neumorph_shapeType="basin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+
+            >
+
+            <ImageView
+                android:id="@+id/shareBtn"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/share_icon"
+                android:padding="10dp"
+                android:textColor="?android:attr/textColorPrimary"/>
+
+            <ImageView
+                android:id="@+id/likeBtn"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:src="@drawable/unlike" />
+
+        </LinearLayout>
+
+    </soup.neumorphism.NeumorphCardView>
+
+    <!-- Bottom bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:baselineAligned="true"
+        android:weightSum="2"
+        android:layout_marginBottom="40dp">
+
+        <soup.neumorphism.NeumorphButton
+            android:id="@+id/logoutBtn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="🔓 Logout"
+            android:gravity="center"
+            android:clickable="true"
+            app:neumorph_backgroundColor="?android:attr/colorBackground"
+            app:neumorph_shapeType="basin"
+            app:neumorph_shadowColorDark="@color/lighter_gray"
+            app:neumorph_shadowElevation="8dp"
+            android:padding="10dp"
+            android:textColor="?android:attr/textColorPrimary" />
+
+        <soup.neumorphism.NeumorphButton
+            android:id="@+id/viewFavourite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="❤️View Favourite"
+            android:gravity="center"
+            app:neumorph_shapeType="basin"
+            app:neumorph_backgroundColor="?android:attr/colorBackground"
+            app:neumorph_shadowColorDark="@color/lighter_gray"
+            app:neumorph_shadowElevation="8dp"
+            android:clickable="true"
+            android:padding="10dp"
+            android:textColor="?android:attr/textColorPrimary" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text = "- Developed by Khan Omar\nkhanomar0417@gamil.com"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        />
+</RelativeLayout>
